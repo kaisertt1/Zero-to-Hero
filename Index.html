@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zero-to-Hero RPG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Zero-to-Hero</h1>
+      <div class="xp-display">
+        <span>Lvl <span id="level">1</span></span>
+        <div class="xp-bar"><div id="xp-fill"></div></div>
+        <span><span id="xp">0</span>/<span id="xp-needed">100</span></span>
+      </div>
+    </header>
+
+    <div class="stats">
+      <!-- Strength -->
+      <div class="stat">
+        <span>💪 <span id="strength-val">0</span> Strength</span>
+        <button onclick="addXP('strength', 10)">+ Workout</button>
+      </div>
+      
+      <!-- Intelligence -->
+      <div class="stat">
+        <span>🧠 <span id="intelligence-val">0</span> Intelligence</span>
+        <button onclick="addXP('intelligence', 5)">+ Study</button>
+      </div>
+      
+      <!-- Charm -->
+      <div class="stat">
+        <span>✨ <span id="charm-val">0</span> Charm</span>
+        <button onclick="addXP('charm', 8)">+ Skincare</button>
+      </div>
+      
+      <!-- Courage -->
+      <div class="stat">
+        <span>🦸 <span id="courage-val">0</span> Courage</span>
+        <button onclick="addXP('courage', 15)">+ Challenge</button>
+      </div>
+      
+      <!-- Agility -->
+      <div class="stat">
+        <span>🏃 <span id="agility-val">0</span> Agility</span>
+        <button onclick="addXP('agility', 12)">+ Stretch</button>
+      </div>
+      
+      <!-- Discipline -->
+      <div class="stat">
+        <span>⏰ <span id="discipline-val">0</span> Discipline</span>
+        <button onclick="addXP('discipline', 20)">+ Routine</button>
+      </div>
+      
+      <!-- Wisdom -->
+      <div class="stat">
+        <span>🦉 <span id="wisdom-val">0</span> Wisdom</span>
+        <button onclick="addXP('wisdom', 10)">+ Reflect</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- Add below the existing stat buttons -->
+<div class="penalties">
+  <h3>Setbacks</h3>
+  
+  <div class="penalty">
+    <span>🚫 Skipped Workout</span>
+    <button onclick="deductXP('strength', 5)">-5 Strength</button>
+  </div>
+  
+  <div class="penalty">
+    <span>📱 Procrastinated</span>
+    <button onclick="deductXP('discipline', 10)">-10 Discipline</button>
+  </div>
+  
+  <div class="penalty">
+    <span>😴 Poor Sleep</span>
+    <button onclick="deductXP('all', 3)">-3 All</button>
+  </div>
+</div>
