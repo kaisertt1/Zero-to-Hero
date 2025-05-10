@@ -1,4 +1,4 @@
-# Zero-to-Hero
+
 # Zero-to-Hero
 
 The **Zero-to-Hero** project is designed to help individuals track and improve their personal growth journey through gamified elements and structured goals.
