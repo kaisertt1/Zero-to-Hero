@@ -1,0 +1,116 @@
+:root {
+  --primary: #6c5ce7;
+  --primary-dark: #5649c2;
+  --bg: #121212;
+  --card: #1e1e1e;
+  --text: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 20px;
+  line-height: 1.5;
+}
+
+.app {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+h1 {
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.xp-display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--card);
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.xp-bar {
+  flex-grow: 1;
+  height: 20px;
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#xp-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--primary);
+  transition: width 0.3s;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:active {
+  background: var(--primary-dark);
+}
+/* Add to existing CSS */
+.penalties {
+  margin-top: 25px;
+  background: var(--card);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.penalty {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+}
+
+.penalty:last-child {
+  border-bottom: none;
+}
+
+.penalty button {
+  background: #ff4757; /* Red for penalties */
+}
+
+.penalty button:active {
+  background: #cc3a47;
+}
